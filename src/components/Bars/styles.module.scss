@@ -1,0 +1,23 @@
+// .bar {
+//   picture {
+//     position: relative;
+//     transform: translateY(var(--offset))
+//       translateY(calc(var(--progress) * var(--offset) * -1));
+//   }
+
+//   .group:hover & {
+//     opacity: 0;
+//     [data-bar-rect] {
+//       transition: opacity 0.5s ease-in-out;
+//       opacity: 0.3;
+
+//       &.is-active {
+//         opacity: 1;
+//       }
+
+//       // &:not([fill="${var(--choosen-color)}"]) {
+//       //   opacity: 0.3;
+//       // }
+//     }
+//   }
+// }
