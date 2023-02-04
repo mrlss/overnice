@@ -85,6 +85,17 @@ module.exports = {
       });
 
       addComponents({
+        ".bars-block": {
+          transition: "opacity 0.3s ease-out, transform 0.5s ease-in-out",
+          opacity: 0,
+          transform: "translateY(10%)",
+
+          "&.is-loaded": {
+            opacity: 1,
+            transform: "none",
+          },
+        },
+
         "[data-animated-bar]": {
           picture: {
             position: "relative",

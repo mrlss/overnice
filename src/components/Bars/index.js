@@ -90,6 +90,7 @@ export default function Bars({ className = "", viewVisibilityKoeff = 0.2 }) {
   // initial setup for progress based on initial scroll position
   useEffect(() => {
     updateProgress(initialPosition);
+    barsRef.current.classList.add("is-loaded");
   }, [initialPosition, updateProgress]);
 
   // getting initial load scroll position for correct progress calculation (required if page loaded not from top)
@@ -106,7 +107,7 @@ export default function Bars({ className = "", viewVisibilityKoeff = 0.2 }) {
         barsRef.current = node;
       }}
       onMouseOver={onMouseOver}
-      className={`w-full gap-x-4 gap-y-10 flex flex-wrap lg:flex-nowrap lg:justify-around justify-center items-end lg:gap-x-10 laptop:gap-x-20 group pointer-events-none ${className}`}
+      className={`w-full gap-x-4 gap-y-10 flex flex-wrap lg:flex-nowrap lg:justify-around justify-center items-end lg:gap-x-10 laptop:gap-x-20 group pointer-events-none bars-block ${className}`}
     >
       {INTRO_BARS.map((bar) => (
         <BarItem key={bar.id} {...bar} />
